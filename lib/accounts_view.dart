@@ -7,13 +7,13 @@ import 'transactions_view.dart';
 class AccountsListView extends State {
   @override
   Widget build(BuildContext context) {
-    MXPlatform.getInstance().initialize(context);
+    MXMobileFlutter.getInstance().initialize(context);
     return Scaffold(
       //When integrating with MXMobile, we recommend not to have app bar as MXMobile's app bar is
 
       body: FutureBuilder<List<Account>?>(
-        future:
-            MXPlatform.getInstance().getAccounts(params: ""), //fetchAccounts(),
+        future: MXMobileFlutter.getInstance()
+            .getAccounts(params: ""), //fetchAccounts(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return const Center(child: CircularProgressIndicator());

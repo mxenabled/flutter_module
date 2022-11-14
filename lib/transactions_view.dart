@@ -14,7 +14,7 @@ class TransactionsScreen extends StatelessWidget {
       //   title: Text(account.name),
       // ),
       body: FutureBuilder<List<Transaction>?>(
-        future: MXPlatform.getInstance().getTransactions(account.guid),
+        future: MXMobileFlutter.getInstance().getTransactions(account.guid),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return const Center(child: CircularProgressIndicator());
