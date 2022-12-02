@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'accounts_view.dart';
 
@@ -12,14 +14,6 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
       body: Center(child: JSONListView()),
     ));
-  }
-}
-
-double checkDouble(dynamic value) {
-  if (value is String) {
-    return double.parse(value);
-  } else {
-    return value.toDouble();
   }
 }
 
